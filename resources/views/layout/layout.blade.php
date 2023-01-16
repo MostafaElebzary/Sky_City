@@ -10,7 +10,7 @@
             <meta charset="utf-8"/>
             @inject('Setting','App\Models\Setting')
             <title>
-                {{--                {{$Setting->find(1)->name}}--}}
+                {{--                {{$setting->find(1)->name}}--}}
                 | @yield('title')
             </title>
             <meta name="description" content=""/>
@@ -465,7 +465,7 @@
                                     || Auth::user()->can('Categories')
                                     || Auth::user()->can('Cities')
                                     || Auth::user()->can('District')
-                                    || Auth::user()->can('Setting')
+                                    || Auth::user()->can('setting')
                                      )
                                     <li class="menu-item menu-item-submenu
                                 @if(Request::segment(1) == 'Owners' ||
@@ -476,7 +476,7 @@
                                     Request::segment(1) == 'Cities'||
                                     Request::segment(1) == 'District'||
                                     Request::segment(1) == 'faq'||
-                                    Request::segment(1) == 'Setting'
+                                    Request::segment(1) == 'setting'
                                  )   menu-item-open active @endif
 
 
@@ -717,7 +717,7 @@
                                                         </a>
                                                     </li>
 
-                                                @can('Setting')
+                                                @can('setting')
                                                     <li class="menu-item @if(Request::segment(1) == 'Cities')  menu-item-active @endif  "
                                                         aria-haspopup="true">
                                                         <a href="{{url('Cities')}}" class="menu-link">
@@ -737,7 +737,7 @@
 											</svg>
                                             <!--end::Svg Icon--></span>
                                                             <span class="menu-text"
-                                                            >{{__('lang.General Setting')}}</span>
+                                                            >{{__('lang.General setting')}}</span>
                                                         </a>
                                                     </li>
                                                 @endcan

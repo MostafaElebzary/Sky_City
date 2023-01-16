@@ -4403,7 +4403,7 @@ Docs & License: https://fullcalendar.io/
         var endMarker = framingRange.end;
         var instanceStarts = [];
         while (dayMarker < endMarker) {
-            var instanceStart 
+            var instanceStart
             // if everyday, or this particular day-of-week
             = void 0;
             // if everyday, or this particular day-of-week
@@ -7488,7 +7488,7 @@ Docs & License: https://fullcalendar.io/
         View.prototype.initialize = function () {
         };
         Object.defineProperty(View.prototype, "activeStart", {
-            // Date Setting/Unsetting
+            // Date setting/Unsetting
             // -----------------------------------------------------------------------------------------------------------------
             get: function () {
                 return this.context.dateEnv.toDate(this.props.dateProfile.activeRange.start);
@@ -9311,14 +9311,14 @@ Docs & License: https://fullcalendar.io/
                 '</div>');
             trEl = skeletonEl.getElementsByTagName('tr')[0];
             if (startCol > 0) {
-                core.appendToElement(trEl, 
+                core.appendToElement(trEl,
                 // will create (startCol + 1) td's
                 new Array(startCol + 1).join(EMPTY_CELL_HTML));
             }
             seg.el.colSpan = endCol - startCol;
             trEl.appendChild(seg.el);
             if (endCol < colCnt) {
-                core.appendToElement(trEl, 
+                core.appendToElement(trEl,
                 // will create (colCnt - endCol) td's
                 new Array(colCnt - endCol + 1).join(EMPTY_CELL_HTML));
             }

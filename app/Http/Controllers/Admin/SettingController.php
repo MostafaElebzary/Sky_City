@@ -12,7 +12,7 @@ class SettingController extends Controller
     {
 
         $Setting = Setting::find(1);
-        return view('Admin.Setting.index', compact('Setting'));
+        return view('Admin.setting.index', compact('Setting'));
 
     }
 
@@ -56,7 +56,7 @@ class SettingController extends Controller
         try {
             $Setting->save();
         } catch (\Exception $e) {
-            return redirect('/Setting')->with('error_message', 'Failed');
+            return redirect('/setting')->with('error_message', 'Failed');
         }
         return redirect()->back()->with('message', 'Success');
     }
@@ -75,7 +75,7 @@ class SettingController extends Controller
     public function edit(Request $request)
     {
         $Setting = Setting::find($request->id);
-        return view('Admin.Setting.model', compact('Setting'));
+        return view('Admin.setting.model', compact('Setting'));
     }
 
 

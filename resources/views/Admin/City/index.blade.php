@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('title')
-    {{__('lang.General Setting')}}
+    {{__('lang.General setting')}}
 @endsection
 @section('css')
     <link href="{{asset('dashboard/assets/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet"
@@ -43,7 +43,7 @@
                             {{--                            </li>--}}
 
                             <li class="breadcrumb-item">
-                                <h5 class="text-dark font-weight-bold my-1 mr-5 ">{{trans('lang.General Setting')}}</h5>
+                                <h5 class="text-dark font-weight-bold my-1 mr-5 ">{{trans('lang.General setting')}}</h5>
                             </li>
                         </ul>
 
@@ -60,7 +60,7 @@
             <div class="card card-custom gutter-b">
                 <div class="card-header flex-wrap py-3">
                     <div class="card-title">
-                        <h3 class="card-label">{{__('lang.General Setting')}}
+                        <h3 class="card-label">{{__('lang.General setting')}}
                     </div>
                     <div class="card-toolbar">
                         <!--begin::Button-->

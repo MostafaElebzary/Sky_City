@@ -106,7 +106,7 @@ return [
 
     'LoginedIn' => 'تسجيل الدخول فى',
     'ip' => 'من جهاز ذات الIP ',
-    'General Setting' => ' الاعدادات العامة  ',
+    'General setting' => ' الاعدادات العامة  ',
     'btn_yes' => ' نعم  ',
     'btn_no' => ' لا  ',
     'warrning' => ' هل انت متاكد من العملية  ',
@@ -324,7 +324,7 @@ return [
     'sell-contracts' => 'عقود المبايعة',
     'rent-contracts' => 'عقود التأجير',
     'Cities' => 'المدن',
-    'Setting' => 'الاعدادات العامة',
+    'setting' => 'الاعدادات العامة',
     'tax_num' => 'الرقم الضريبي ',
     'choose_role' => 'اختار الصلاحية ',
     'print_receipt' => 'طباعة السند ',

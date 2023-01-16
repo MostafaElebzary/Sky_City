@@ -406,7 +406,7 @@
                                     || Auth::user()->can('Categories')
                                     || Auth::user()->can('Cities')
                                     || Auth::user()->can('District')
-                                    || Auth::user()->can('Setting')
+                                    || Auth::user()->can('setting')
                                      )
                                     <li class="menu-item menu-item-submenu
                                 @if(Request::segment(1) == 'Owners' ||
@@ -416,7 +416,7 @@
                                     Request::segment(1) == 'Categories'||
                                     Request::segment(1) == 'Cities'||
                                     Request::segment(1) == 'District'||
-                                    Request::segment(1) == 'Setting'
+                                    Request::segment(1) == 'setting'
                                  )   menu-item-open active @endif
 
 
@@ -609,10 +609,10 @@
                                                     </li>
 
                                                 @endcan
-                                                @can('Setting')
-                                                    <li class="menu-item @if(Request::segment(1) == 'Setting')  menu-item-active @endif  "
+                                                @can('setting')
+                                                    <li class="menu-item @if(Request::segment(1) == 'setting')  menu-item-active @endif  "
                                                         aria-haspopup="true">
-                                                        <a href="{{url('Setting')}}" class="menu-link">
+                                                        <a href="{{url('setting')}}" class="menu-link">
 										<span class="svg-icon menu-icon"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-05-14-112058/theme/html/demo2/dist/../src/media/svg/icons/Design/Image.svg--><svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
@@ -629,7 +629,7 @@
 											</svg>
                                             <!--end::Svg Icon--></span>
                                                             <span class="menu-text"
-                                                            >{{__('lang.General Setting')}}</span>
+                                                            >{{__('lang.General setting')}}</span>
                                                         </a>
                                                     </li>
                                                 @endcan

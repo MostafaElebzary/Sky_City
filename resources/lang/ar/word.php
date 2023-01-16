@@ -183,7 +183,7 @@ return [
     'NOrder'=>'عدد الطلبات',
     'Top Users'=>'العميل الاكثر شراءً',
     'client banquet'=>'وليمة عميل',
-    'Setting'=>'الأعدادات',
+    'Ssetting'=>'الأعدادات',
     'No Characters Allowed, Only Numbers'=>'غير مسموح بأستخدام حروف, ارقام فقط',
     'Invalid Mobile Number'=>'رقم الجوال غير صالح',
     'Password Must match'=>'كلمة المرور غير متطابقة',
@@ -248,13 +248,13 @@ return [
     ''=>'',
 
 
-    
 
 
 
-    
 
-    
+
+
+
 
 
 

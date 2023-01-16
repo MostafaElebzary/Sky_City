@@ -30,7 +30,7 @@ class PermissionSeed extends Seeder
             'Categories',
             'Cities',
             'District',
-            'Setting',
+            'setting',
 //
         ];
         foreach ($pageData as $item) {

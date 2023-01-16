@@ -160,7 +160,7 @@ Route::group(['middleware' => 'auth'], function () {
 //settings
 
     Route::post('/Update_Setting', [\App\Http\Controllers\Admin\SettingController::class, 'update']);
-    Route::get('/Setting', [\App\Http\Controllers\Admin\SettingController::class, 'index'])->middleware('can:Setting');
+    Route::get('/setting', [\App\Http\Controllers\Admin\SettingController::class, 'index'])->middleware('can:setting');
 
 //    Advertising
     Route::get('/Advertising_datatable', [\App\Http\Controllers\Admin\AdvertisingController::class, 'datatable'])->name('Advertising.datatable.data')->middleware('can:Advertising');

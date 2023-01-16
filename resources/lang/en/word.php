@@ -183,7 +183,7 @@ return [
     'NOrder'=>'Number Of Order',
     'Top Users'=>'Valuabe Customers',
     'client banquet'=>'Client Banquet',
-    'Setting'=>'Setting',
+    'Setting'=>'setting',
     'No Characters Allowed, Only Numbers'=>'No Characters Allowed, Only Numbers',
     'Invalid Mobile Number'=>'Invalid Mobile Number',
     'Password Must match'=>'Password Must match',
@@ -250,5 +250,5 @@ return [
     ''=>'',
 
 
-    
+
 ];

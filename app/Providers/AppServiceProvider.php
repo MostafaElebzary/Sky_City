@@ -39,7 +39,7 @@ class AppServiceProvider extends ServiceProvider
             }
         }
 //        date_default_timezone_set('Asia/Riyadh');
-//        View::share('settings', Setting::first());
+//        View::share('settings', setting::first());
         View::share('unread_inbox', ContactUs::where('is_read', 0)->get());
 
     }

@@ -55,6 +55,7 @@ class HomeController extends Controller
             'name' => 'required',
             'phone' => 'required',
             'message' => 'required|string',
+            'advertising_id' => 'nullable',
 
 
         ];
@@ -67,6 +68,7 @@ class HomeController extends Controller
             'name' => $request->name,
             'phone' => $request->phone,
             'message' => $request->message,
+            'advertising_id' => $request->advertising_id,
 
         ]);
 

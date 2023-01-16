@@ -48259,7 +48259,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
         // Parses value passed to .set method. Returns current value if not parse-able.
         function resolveToValue(to, handleNumber) {
-            // Setting with null indicates an 'ignore'.
+            // setting with null indicates an 'ignore'.
             // Inputting 'false' is invalid.
             if (to === null || to === false || to === undefined) {
                 return scope_Locations[handleNumber];
@@ -50653,7 +50653,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
       file.upload = {
         uuid: Dropzone.uuidv4(),
         progress: 0,
-        // Setting the total upload size to file.size for the beginning
+        // setting the total upload size to file.size for the beginning
         // It's actual different than the size to be transmitted.
         total: file.size,
         bytesSent: 0,
@@ -51282,7 +51282,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
 
       var method = this.resolveOption(this.options.method, files);
       var url = this.resolveOption(this.options.url, files);
-      xhr.open(method, url, true); // Setting the timeout after open because of IE11 issue: https://gitlab.com/meno/dropzone/issues/8
+      xhr.open(method, url, true); // setting the timeout after open because of IE11 issue: https://gitlab.com/meno/dropzone/issues/8
 
       xhr.timeout = this.resolveOption(this.options.timeout, files); // Has to be after `.open()`. See https://github.com/enyo/dropzone/issues/179
 
@@ -60295,7 +60295,7 @@ function diff_bisect_(text1, text2) {
   var v_length = 2 * max_d;
   var v1 = new Array(v_length);
   var v2 = new Array(v_length);
-  // Setting all elements to -1 is faster in Chrome & Firefox than mixing
+  // setting all elements to -1 is faster in Chrome & Firefox than mixing
   // integers and undefined.
   for (var x = 0; x < v_length; x++) {
     v1[x] = -1;

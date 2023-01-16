@@ -1827,7 +1827,7 @@ var Dropzone = function (_Emitter) {
       file.upload = {
         uuid: Dropzone.uuidv4(),
         progress: 0,
-        // Setting the total upload size to file.size for the beginning
+        // setting the total upload size to file.size for the beginning
         // It's actual different than the size to be transmitted.
         total: file.size,
         bytesSent: 0,
@@ -2432,7 +2432,7 @@ var Dropzone = function (_Emitter) {
       var url = this.resolveOption(this.options.url, files);
       xhr.open(method, url, true);
 
-      // Setting the timeout after open because of IE11 issue: https://gitlab.com/meno/dropzone/issues/8
+      // setting the timeout after open because of IE11 issue: https://gitlab.com/meno/dropzone/issues/8
       xhr.timeout = this.resolveOption(this.options.timeout, files);
 
       // Has to be after `.open()`. See https://github.com/enyo/dropzone/issues/179
