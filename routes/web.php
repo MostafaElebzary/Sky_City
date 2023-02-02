@@ -191,6 +191,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/Delete_Contact', [\App\Http\Controllers\Admin\ContactController::class, 'delete']);
 
 
+    Route::get('out/Contact', [\App\Http\Controllers\Admin\OutContactController::class, 'index']);
+    Route::get('out/Contact/{id}', [\App\Http\Controllers\Admin\OutContactController::class, 'index2']);
+    Route::get('out/Show_contact', [\App\Http\Controllers\Admin\OutContactController::class, 'edit']);
+    Route::get('out/Delete_Contact', [\App\Http\Controllers\Admin\OutContactController::class, 'delete']);
+
+
+
     Route::get('/Reviews', [\App\Http\Controllers\Admin\ReviewsController::class, 'index']);
     Route::get('/Delete_Reviews', [\App\Http\Controllers\Admin\ReviewsController::class, 'delete']);
     Route::get('/logout', [\App\Http\Controllers\Admin\AdminController::class, 'logout']);
