@@ -10,6 +10,7 @@ use App\Http\Resources\SliderResource;
 use App\Models\Advertising;
 use App\Models\ContactUs;
 use App\Models\Faq;
+use App\Models\OutInbox;
 use App\Models\Setting;
 use App\Models\Slider;
 use Illuminate\Http\Request;
@@ -42,6 +43,9 @@ class HomeController extends Controller
     public function post_details($id)
     {
         $slider = Advertising::where('id', $id)->with('faqs')->first();
+        if (!$slider) {
+            return response()->json(msgdata(not_found(), "غير موجود", (object)[]));
+        }
         $slider->view = $slider->view + 1;
         $slider->save();
         $data = new AdDetailsResource($slider);
@@ -69,6 +73,33 @@ class HomeController extends Controller
             'phone' => $request->phone,
             'message' => $request->message,
             'advertising_id' => $request->advertising_id,
+
+        ]);
+
+        return response()->json(msgdata(success(), "تم بنجاح", []));
+
+    }
+
+    public function OutContactUs(Request $request)
+    {
+
+        $rule = [
+            'name' => 'required',
+            'phone' => 'required',
+            'type' => 'required|in:housing,real_estate',
+
+
+        ];
+
+        $validate = Validator::make($request->all(), $rule);
+        if ($validate->fails()) {
+            return response()->json(msgdata(error(), $validate->messages()->first(), []));
+        }
+        $data = OutInbox::create([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'type' => $request->type,
+
 
         ]);
 

@@ -24,4 +24,5 @@ Route::get('/settings/{key}', [HomeController::class, 'settings']);
 Route::get('/posts', [HomeController::class, 'posts']);
 Route::get('/post-details/{id}', [HomeController::class, 'post_details']);
 Route::post('/ContactUs', [HomeController::class, 'ContactUs']);
+Route::post('/Out-ContactUs', [HomeController::class, 'OutContactUs']);
 

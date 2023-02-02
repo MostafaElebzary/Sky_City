@@ -42,7 +42,7 @@
 						<!--begin::Logo-->
 						<a href="#" class="login-logo pb-xl-20 pb-15">
 
-							<img src="#" style="height: 160px !important;
+							<img src="{{asset('/logo.png')}}" style="height: 160px !important;
     width: 80%;" alt="" />
 						</a>
 						<!--end::Logo-->
