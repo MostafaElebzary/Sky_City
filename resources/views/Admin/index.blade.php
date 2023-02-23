@@ -327,60 +327,13 @@
                 chart.render();
             }
 
-            var _demo2 = function () {
-                const apexChart = "#chart_2";
-                var options = {
-                    series: [{
-                        name: 'عفود البيع ',
-                        data: [
-                            @inject('SellContract','App\Models\SellContract')
-                                @for($x=1; $x<=12; $x++)
-                                "{{$SellContract->whereYear('created_at',date('Y'))->whereMonth('created_at','=',$x)->count()}}",
-                            @endfor
-                        ]
-                    },
-                        {
-                            name: 'عفود الايجار ',
-                            data: [
-                                @inject('RentContract','App\Models\RentContract')
-                                    @for($x=1; $x<=12; $x++)
-                                    "{{$RentContract->whereYear('created_at',date('Y'))->whereMonth('created_at','=',$x)->count()}}",
-                                @endfor
-                            ]
-                        },
-                    ],
-                    chart: {
-                        height: 350,
-                        type: 'area'
-                    },
-                    dataLabels: {
-                        enabled: false
-                    },
-                    stroke: {
-                        curve: 'smooth'
-                    },
-                    xaxis: {
-                        type: 'datetime',
 
-                        categories: [
-                            @for($x=1; $x<=12; $x++)
-                                "{{date('Y')}}-{{$x}}-1",
-                            @endfor
-                        ]
-                    },
-                    tooltip: {},
-                    colors: [success, danger]
-                };
-
-                var chart = new ApexCharts(document.querySelector(apexChart), options);
-                chart.render();
-            }
 
             return {
                 // public functions
                 init: function () {
                     _demo3();
-                    _demo2();
+
                 }
             };
         }();

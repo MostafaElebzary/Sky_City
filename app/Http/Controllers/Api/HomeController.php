@@ -21,6 +21,11 @@ class HomeController extends Controller
     public function sliders()
     {
         $slider = Slider::where('is_visible', 1)->orderBy('sort', 'asc')->get();
+        $counter = $this->settings('counter');
+        if ($counter) {
+            $counter->value += 1;
+            $counter->save();
+        }
         $data = SliderResource::collection($slider);
         return response()->json(msgdata(success(), "تم بنجاح", $data));
     }
